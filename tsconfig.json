@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "es2016",
+		"module": "esnext",
+		"lib": ["es2016","dom"],
+		"sourceMap": true,
+		"strict": true,
+		"removeComments": true,
+		"moduleResolution": "node"
+	},
+	"include": ["./src"]
+}
