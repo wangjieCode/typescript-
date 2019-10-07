@@ -1,40 +1,18 @@
 import { Square } from './core/Square';
 import { View } from './core/View';
 import { SquareGroup } from './core/SquareGroup';
+import { createTeris } from './core/Teris';
 
-const sq = new Square();
-const mm = new SquareGroup([
-	{
-		x: 2,
-		y: 0
-	},
-	{
-		x: 1,
-		y: 0
-	},
-	{
-		x: 0,
-		y: 0
-	},
-	{
-		x: 0,
-		y: -1
-	}
-],
-	{
-		x: 0,
-		y: 3
-	},
-	"#f50"
-)
-console.log(mm)
+const sq = createTeris();
+const mm = new SquareGroup(sq,{x:3, y:0},"#f40");
+console.log(createTeris())
 mm.squareS.forEach(sq=> {
 	sq.view = new View(sq, document.getElementById('root'))
 })
 
 setInterval( () => {
 	mm.center = {
-		x:mm.center.x + 1,
+		x:mm.center.x,
 		y:mm.center.y + 1
 	}
 },1000)
