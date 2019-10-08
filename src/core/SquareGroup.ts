@@ -12,9 +12,12 @@ export class SquareGroup {
 		return this._center;
 	}
 	
+	public get shape()  {
+		return this._shape
+	}
+	
 	public set center(v : Point) {
 		this._center  = v;
-		console.log(this._center)
 		this._shape.forEach( (ele,index) => {
 			this._squareS[index].point={
 				x: this._center.x + ele.x,
