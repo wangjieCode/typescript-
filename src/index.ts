@@ -30,17 +30,3 @@ change.addEventListener('click', function () {
 	// 	y: mm.center.y + 1
 	// }
 })
-
-// const temer = setInterval( () => {
-// 	const flag = rules.canMove(sq, {
-// 		x: mm.center.x,
-// 		y: mm.center.y + 1
-// 	})
-// 	if(flag) {
-// 		clearInterval(temer)
-// 	}
-// 	mm.center = {
-// 		x:mm.center.x,
-// 		y:mm.center.y + 1
-// 	}
-// },1000)
